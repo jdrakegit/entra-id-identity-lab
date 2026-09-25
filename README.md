@@ -1,3 +1,4 @@
+
 # Microsoft Entra ID Identity Lab
 
 An identity lab built in my own Entra ID tenant. I set up a few accounts with different levels of access, then ran through the kind of tickets a help desk handles every day: a user locked out of their account, a password reset, and offboarding someone who left.
@@ -10,7 +11,7 @@ Everything else I've built has been in AWS, so this was my first real time worki
 
 Signed up for Azure for Students and verified with my school email. That gave me my own tenant where I'm the Global Administrator, instead of being a regular user in my school's directory.
 
-![Azure for Students credit](screenshots/01-azure-for-students-credit.jpg)
+![Azure for Students credit]<img width="3412" height="1884" alt="01-azure-for-students-credit" src="https://github.com/user-attachments/assets/9fd7fd33-fe43-4856-8675-71d191c74315" />
 
 I set up four accounts instead of doing everything from one:
 
