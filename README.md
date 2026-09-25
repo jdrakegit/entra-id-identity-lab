@@ -10,7 +10,7 @@ Everything else I've built has been in AWS, so this was my first real time worki
 
 Signed up for Azure for Students and verified with my school email. That gave me my own tenant where I'm the Global Administrator, instead of being a regular user in my school's directory.
 
-<img width="3412" height="1884" alt="01-azure-for-students-credit" src="https://github.com/user-attachments/assets/7c28e793-43b4-479f-8eb4-d025f1fc81bf" />
+<img width="750" alt="01-azure-for-students-credit" src="https://github.com/user-attachments/assets/7c28e793-43b4-479f-8eb4-d025f1fc81bf" />
 
 I set up four accounts instead of doing everything from one:
 
@@ -19,11 +19,11 @@ I set up four accounts instead of doing everything from one:
 - **Jordan Drake (Help Desk):** Helpdesk Administrator, can only reset passwords for regular users
 - **Robert Williams:** a regular employee with no admin roles
 
-<img width="3420" height="1884" alt="02-all-users" src="https://github.com/user-attachments/assets/752f98a0-f670-464e-80cf-bde0fcfa9082" />
+<img width="750" alt="02-all-users" src="https://github.com/user-attachments/assets/752f98a0-f670-464e-80cf-bde0fcfa9082" />
 
 [drag 03 here]
 
-<img width="3420" height="1890" alt="04-jordan-helpdesk-admin-role" src="https://github.com/user-attachments/assets/cf436103-0f07-4c21-862b-de68356a03e4" />
+<img width="750" alt="04-jordan-helpdesk-admin-role" src="https://github.com/user-attachments/assets/cf436103-0f07-4c21-862b-de68356a03e4" />
 
 Security defaults are on, so every account has to set up MFA with Microsoft Authenticator the first time it signs in.
 
@@ -31,25 +31,25 @@ Security defaults are on, so every account has to set up MFA with Microsoft Auth
 
 Robert signs in with the wrong password a few times.
 
-<img width="3418" height="1964" alt="05-user-signin-error" src="https://github.com/user-attachments/assets/e4b73dcb-22b9-4039-9f88-d600202e873d" />
+<img width="750" alt="05-user-signin-error" src="https://github.com/user-attachments/assets/e4b73dcb-22b9-4039-9f88-d600202e873d" />
 
 The sign-in logs show his attempts failing with error code `50126`, which means a bad username or password. So the problem is the password, not MFA or the account itself.
 
-<img width="1670" height="1358" alt="06-signin-logs-failed-attempt" src="https://github.com/user-attachments/assets/b358613b-ce43-4b36-91f0-ecd9f04cf1d3" />
+<img width="600" alt="06-signin-logs-failed-attempt" src="https://github.com/user-attachments/assets/b358613b-ce43-4b36-91f0-ecd9f04cf1d3" />
 
 From the help desk account, I reset his password and gave him the temporary one.
 
-<img width="3420" height="1888" alt="07-helpdesk-password-reset" src="https://github.com/user-attachments/assets/936a977d-b76e-44cc-9962-1c16db913174" />
+<img width="750" alt="07-helpdesk-password-reset" src="https://github.com/user-attachments/assets/936a977d-b76e-44cc-9962-1c16db913174" />
 
 He signs in, sets a new password, and he's back in. The "Don't have a subscription?" page is expected since he doesn't have access to any Azure resources.
 
-<img width="3420" height="1968" alt="07b-user-access-restored" src="https://github.com/user-attachments/assets/4327149e-3c47-4089-8efa-43e943129ea8" />
+<img width="750" alt="07b-user-access-restored" src="https://github.com/user-attachments/assets/4327149e-3c47-4089-8efa-43e943129ea8" />
 
 ## Least privilege
 
 I tried resetting the Admin account's password from the help desk account, and it got blocked. The Helpdesk Administrator role can't touch other admins.
 
-<img width="3420" height="1888" alt="08-helpdesk-blocked-on-admin" src="https://github.com/user-attachments/assets/51c4f959-fbab-4690-b92b-0545f692a929" />
+<img width="750" alt="08-helpdesk-blocked-on-admin" src="https://github.com/user-attachments/assets/51c4f959-fbab-4690-b92b-0545f692a929" />
 
 It also couldn't disable users. The "Account enabled" checkbox was grayed out until I switched over to the Admin account.
 
@@ -57,19 +57,19 @@ It also couldn't disable users. The "Account enabled" checkbox was grayed out un
 
 For this one, Robert "left the company." First I revoked his sessions so he'd get signed out everywhere.
 
-<img width="3420" height="1880" alt="09-offboarding-revoke-sessions" src="https://github.com/user-attachments/assets/af0f9121-4da5-4777-82d1-cad28d4f7c5f" />
+<img width="750" alt="09-offboarding-revoke-sessions" src="https://github.com/user-attachments/assets/af0f9121-4da5-4777-82d1-cad28d4f7c5f" />
 
 Then I disabled the account instead of deleting it, so it still exists for records but can't sign in.
 
-<img width="3420" height="1960" alt="10-offboarding-account-disabled" src="https://github.com/user-attachments/assets/2f68474e-8212-4283-b439-f6a3e5afb8df" />
+<img width="750" alt="10-offboarding-account-disabled" src="https://github.com/user-attachments/assets/2f68474e-8212-4283-b439-f6a3e5afb8df" />
 
 Signing in as Robert now gets blocked:
 
-<img width="898" height="834" alt="11-offboarding-signin-blocked" src="https://github.com/user-attachments/assets/c8fa655c-a275-415f-8823-b44611e2874b" />
+<img width="400" alt="11-offboarding-signin-blocked" src="https://github.com/user-attachments/assets/c8fa655c-a275-415f-8823-b44611e2874b" />
 
 And the logs show error code `50057`, meaning the account is disabled.
 
-<img width="3418" height="734" alt="11b-signin-logs-account-disabled" src="https://github.com/user-attachments/assets/cc533307-80b0-4c39-bd86-f73ec82bf54c" />
+<img width="750" alt="11b-signin-logs-account-disabled" src="https://github.com/user-attachments/assets/cc533307-80b0-4c39-bd86-f73ec82bf54c" />
 
 ## Things I ran into
 
@@ -84,10 +84,6 @@ Other error codes that showed up in the logs: `50055` (temporary password expire
 ## What's next
 
 Get the P1 trial working so I can add Conditional Access, a dynamic group based on department, and self-service password reset. I also want to tie this into my ServiceNow lab so each scenario starts as a ticket and gets closed out with notes.
-
----
-
-Built by [Jordan Drake](https://github.com/jdrakegit) · [LinkedIn](https://www.linkedin.com/in/jordan-drake-a95471397)
 
 ---
 
