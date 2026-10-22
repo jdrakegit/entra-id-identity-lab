@@ -21,8 +21,6 @@ I set up four accounts instead of doing everything from one:
 
 <img width="750" alt="02-all-users" src="https://github.com/user-attachments/assets/752f98a0-f670-464e-80cf-bde0fcfa9082" />
 
-[drag 03 here]
-
 <img width="750" alt="04-jordan-helpdesk-admin-role" src="https://github.com/user-attachments/assets/cf436103-0f07-4c21-862b-de68356a03e4" />
 
 Security defaults are on, so every account has to set up MFA with Microsoft Authenticator the first time it signs in.
@@ -80,10 +78,6 @@ And the logs show error code `50057`, meaning the account is disabled.
 - New sign-ins took about 5 to 15 minutes to show up in the logs
 
 Other error codes that showed up in the logs: `50055` (temporary password expired on first sign-in) and `50072` (user has to set up MFA).
-
-## What's next
-
-Get the P1 trial working so I can add Conditional Access, a dynamic group based on department, and self-service password reset. I also want to tie this into my ServiceNow lab so each scenario starts as a ticket and gets closed out with notes.
 
 ---
 
